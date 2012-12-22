@@ -36,8 +36,8 @@
                      e.preventDefault();
                 });
                          	
-              	var modal_height = $(modal_id).outerHeight();
-        	  	var modal_width = $(modal_id).outerWidth();
+              	var modal_height = $(modal_id).outerHeight(false);
+        	  	var modal_width = $(modal_id).outerWidth(false);
 
         		$('#lean_overlay').css({ 'display' : 'block', opacity : 0 });
 
