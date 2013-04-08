@@ -26,12 +26,14 @@
               
               	var modal_id = $(this).attr("href");
 
-				$("#lean_overlay").click(function() { 
-                     close_modal(modal_id);                    
+		$("#lean_overlay").click(function() { 
+                     close_modal(modal_id);
+                   
                 });
                 
-                $(o.closeButton).click(function() { 
-                     close_modal(modal_id);                    
+                $(o.closeButton).click(function(e) { 
+                     close_modal(modal_id);
+                     e.preventDefault();
                 });
                          	
               	var modal_height = $(modal_id).outerHeight();
