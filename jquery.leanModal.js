@@ -5,7 +5,7 @@
         leanModal: function(options) {
  
             var defaults = {
-                top: 100,
+                top: '100px',
                 overlay: 0.5,
                 closeButton: null
             }
@@ -49,7 +49,7 @@
         			'z-index': 11000,
         			'left' : 50 + '%',
         			'margin-left' : -(modal_width/2) + "px",
-        			'top' : o.top + "px"
+        			'top' : o.top
         		
         		});
 
