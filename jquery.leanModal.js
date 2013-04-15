@@ -11,9 +11,11 @@
             }
             
             var overlay = $("<div id='lean_overlay'></div>");
-            
-            $("body").append(overlay);
-                 
+
+            if (!$("#lean_overlay").length) {
+                $("body").append(overlay);
+            }
+
             options =  $.extend(defaults, options);
  
             return this.each(function() {
