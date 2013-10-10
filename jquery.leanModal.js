@@ -29,20 +29,25 @@
             close_modal(modal_id);
           });
 
+          $(document).keydown(function(e) {
+            if (e.keyCode === 27) {
+              close_modal(modal_id);
+            }
+          });
+
           $(options.closeButton).click(function(e) {
             e.preventDefault();
             close_modal(modal_id);
             return false;
           });
 
-          var modal_height = $(modal_id).outerHeight();
-          var modal_width = $(modal_id).outerWidth();
-
+          var modal = $(modal_id);
+          var modal_width = $(modal_id).outerWidth(false);
           var lean_overlay = $('#lean_overlay');
+
           lean_overlay.css({ 'display' : 'block', opacity : 0 });
           lean_overlay.fadeTo(200, options.overlay);
 
-          var modal = $(modal_id);
           modal.css({
             'display' : 'block',
             'position' : 'fixed',
