@@ -34,6 +34,7 @@
                 $(o.closeButton).click(function(e) { 
                      close_modal(modal_id);
                      e.preventDefault();
+                     return false;
                 });
                          	
               	var modal_height = $(modal_id).outerHeight(false);
